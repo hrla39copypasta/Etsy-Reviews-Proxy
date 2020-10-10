@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/user', createProxyMiddleware({ target: 'http://localhost:8001', changeOrigin: true }));
 app.use('/entry', createProxyMiddleware({ target: 'http://localhost:8001', changeOrigin: true }));
 
-//Display product endpoints
+// //Display product endpoints
 app.use('/product-display', createProxyMiddleware({ target: 'http://localhost:8002', changeOrigin: true }));
 app.use('/photo-display', createProxyMiddleware({ target: 'http://localhost:8002', changeOrigin: true }));
 
